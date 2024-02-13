@@ -1,3 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using FactoryMethod;
 
-Console.WriteLine("Hello, World!");
+Console.Title = "Factory Method";
+
+var factories = new List<DiscountFactory>
+{
+    new CodeDiscountFactory(Guid.NewGuid()),
+    new CountryDiscountFactory("CO")
+};
+
+foreach (var factory in factories)
+{
+    var discountService = factory.CreateDiscountService();
+    Console.WriteLine(
+        $"Discount Service: {discountService}, Discount Percentage: {discountService.DiscountPercentage}%");
+}
