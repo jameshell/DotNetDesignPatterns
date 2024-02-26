@@ -13,6 +13,7 @@ families of related or dependent objects without specifying their concrete class
 be potentially overridden.
 - Use an interface when you only need to specify the expected functionality of a
 class.
+- AbstractProduct declares an interface for a type of product object.
 ### Pattern Consequences
 - The client is decoupled from the concrete factory implementation.
 ### Related Patterns
