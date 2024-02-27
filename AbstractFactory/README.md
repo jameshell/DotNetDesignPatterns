@@ -13,7 +13,15 @@ families of related or dependent objects without specifying their concrete class
 be potentially overridden.
 - Use an interface when you only need to specify the expected functionality of a
 class.
-- AbstractProduct declares an interface for a type of product object.
+- An **Abstract Product** declares an interface for a type of product object.
+- A **Concrete Product** defines the product that has to be created by a corresponding
+factory, and implements the AbstractProduct interface.
+- An **Abstract Factory** declares an interface for operations that create *Abstract Product*
+objects.
+- A **Concrete Factory** implements the operations to create *Concrete Product* objects.
+- Updated model with *Concrete* and *Abstract* representations:
+  ![image](./assets/DiscountServiceAbstractFactory2.png)
+- The client uses only interfaces declared by *Abstract Factory* and *Abstract Product*.
 ### Pattern Consequences
 - The client is decoupled from the concrete factory implementation.
 ### Related Patterns
